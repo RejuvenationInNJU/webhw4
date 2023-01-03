@@ -16,6 +16,7 @@
             font-weight: 100;
             font-family: 'Courier New', Courier, monospace;
             background-color: #f39c12;
+        text-align: center;
         }
     .picture img{
     max-width: 45%;
@@ -34,7 +35,7 @@
 <script type="text/javascript">
     window.onload = getuserName;
     function getuserName(){
-        var userName="秋天的怀念"
+        var userName="秋天的怀念————lijuntong"
         console.log(window.localStorage.getItem("username"))
         if(window.localStorage.getItem("username")!=null) userName="秋天的怀念————"+window.localStorage.getItem("username");
         document.getElementById('UserName').innerHTML=userName;
