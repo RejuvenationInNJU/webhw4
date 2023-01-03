@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    transition: 0.3s;
+    }
+
+    .picture img{
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+    }
+    .picture{
+    text-align:center;
+    background-color: coral;
+    }
+    .watermark{
+                position: absolute;
+                z-index: 999;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                /* 防止元素被触碰到 */
+                pointer-events: none;
+                /* 可以修改图片平铺尺寸 */
+                background-size: 36% auto;
+                /* 这里可以跳转颜色，旋转角度，文案 */
+                background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMTAwJyBoZWlnaHQ9JzEwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48dGV4dCB5PScxNScgZmlsbD0ncmdiYSgwLDE1MCwxNTAsMC44KScgZm9udC1zaXplPScxMCcgdHJhbnNmb3JtPSdyb3RhdGUoLTMwIDEyMCAwKSc+MjAxMjUwMDgyIOadjuS/iuW9pDwvdGV4dD48L3N2Zz4=");
+            }
+    </style>
+</head>
+<body>
+    <div class="picture"><img id="file" src="https://box.nju.edu.cn/f/3961d21fa8db4fa99927/?dl=1" alt=""></div>
+    <div class="watermark"></div>
+</body>
+</html>
