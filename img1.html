@@ -11,7 +11,12 @@
     padding: 0;
     transition: 0.3s;
     }
-
+    .titleHead {
+            font-size: 40px;
+            font-weight: 100;
+            font-family: 'Courier New', Courier, monospace;
+        background-color: coral;
+        }
     .picture img{
     max-width: 35%;
     height: auto;
@@ -38,7 +43,22 @@
     </style>
 </head>
 <body>
+    <div class="titleHead" id="UserName"></div>
     <div class="picture"><img id="file" src="https://box.nju.edu.cn/f/3961d21fa8db4fa99927/?dl=1" alt=""></div>
     <div class="watermark"></div>
+    <script type="text/javascript">
+    window.onload = getuserName;
+    function getuserName(){
+        var userName="秋天的怀念"
+        console.log(window.localStorage.getItem("username"))
+        if(window.localStorage.getItem("username")!=null) userName="秋天的怀念————"+window.localStorage.getItem("username");
+        document.getElementById('UserName').innerHTML=userName;
+    }
+    function change(theme) {
+        document.body.className = theme;
+        document.getElementById('box').className = theme;
+        alert("切换主题为"+theme)
+    }
+</script>
 </body>
 </html>
